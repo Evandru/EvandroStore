@@ -8,7 +8,7 @@
         public int CEP { get; set; }
         public decimal Saldo { get; set; }
         public int EnderecoId { get; set; }
-        public Endereco Endereco { get; set; }
-        public ICollection<Pedido> Pedidos { get; set; }
+        public Endereco Endereco { get; set; } = null!;
+        public ICollection<Pedido> Pedidos { get; set; } = null!;
     }
 }
