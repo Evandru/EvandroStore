@@ -6,11 +6,11 @@ namespace EvandroStore.Data
     public class Context : DbContext
     {
         public Context(DbContextOptions<Context> options) : base(options) { }
-        DbSet<Usuario> Usuarios { get; set; }
-        DbSet<Endereco> Enderecos { get; set; }
-        DbSet<Pedido> Pedidos { get; set; }
-        DbSet<DetalhePedido> DetalhesPedidos { get; set; }
-        DbSet<Produto> Produtos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<DetalhePedido> DetalhesPedidos { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Usuario>().HasKey(m => m.Id);
